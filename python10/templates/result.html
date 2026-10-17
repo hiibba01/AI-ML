@@ -1,0 +1,13 @@
+<!-- this is how jinja2 template engine works! -->
+ <!-- jinja2 extracts info from our python file and puts it in the html file. -->
+<h1>
+
+    Based on your score, you have {{ results }}.
+
+    {% if results>=50 %}
+    <h1>You have passed with a score of {{ results }}!</h1>
+    {% else %}
+    <h2>You have failed with a score of {{ results }}!</h2>
+    {% endif %}
+    
+</h1>

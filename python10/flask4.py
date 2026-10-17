@@ -24,5 +24,15 @@ def form():
         return f"Form submitted! Name: {name}, Email: {email}"
     return render_template("form.html")
 
+
+@app.route('/submit', methods = ['GET', 'POST'])
+def submit():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        # You can process the form data here (e.g., save it to a database, send an email, etc.)
+        return f"Form submitted! Name: {name}, Email: {email}"
+    return render_template("form.html")    
+
 if __name__ == "__main__":  
     app.run(debug=True) 
